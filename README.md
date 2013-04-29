@@ -3,9 +3,9 @@ Screavics-Custom-Mission
 
 Based off the mission provided by Ahoy World and a few other great talented scripted individuals.<br /><br />
 
-<b>Credits these  are the base missions/scripts I chose:</b><br />
-<b>Base Mission:</b><br /><a href='http://www.ahoyworld.co.uk/'>Ahoy World</a><br />
-<b>Extra Scripts:</b><br />
+<b>Base mission and addon scripts are either done by me or someone else. I try to list everyone's name properly if I forget please let me know and show proof.</b><br />
+<b>Credits Base Mission:</b><br /><a href='http://www.ahoyworld.co.uk/'>Ahoy World</a><br />
+<b>Credits Extra Scripts:</b><br />
 <a href='http://www.armaholic.com/page.php?id=18751'>GrenadeStop by Bake (tweaked slightly by Rarek)</a><br />
 <a href='http://forums.bistudio.com/showthread.php?148085-BTC-Revive'>=BTC= Revive</a><br />
 <a href='http://forums.bistudio.com/showthread.php?148959-BTC-TK-punishment-script'>=BTC= Team Killer Punisher</a><br />
