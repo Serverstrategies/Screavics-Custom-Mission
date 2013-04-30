@@ -1,4 +1,4 @@
-Screavics-Custom-Mission
+Screavics-Custom-Mission<br />
 ========================<br /><br />
 
 Based off the mission provided by Ahoy World and a few other great talented scripted individuals.<br /><br />
@@ -15,3 +15,9 @@ And the many great editors that provide their solutions for free on the internet
 Put it in %USERPROFILE%\My Documents\Arma 3 Alpha\missions\ or %USERPROFILE%\My Documents\Arma 3 Alpha - Other Profiles\[USERNAME]\missions\ to be able to edit this mission yourself.<br /><br />
 
 If you would like to just play the mission put the PBO file in the Arma 3\MPMissions folder
+
+Design Phase:<br />
+Whitelisting (Hopefully won't be needed with the release of dedicated)<br />
+More AI support<br /><br />
+
+Working example of this mission is at hs.ssar.co:2302
