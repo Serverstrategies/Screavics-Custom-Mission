@@ -21,7 +21,10 @@ Jack Williams (Rarek) for Ahoy World!
 /* VAS includes */
 #include "gear\common.hpp"
 #include "gear\menu.hpp"
-
+Respawn = 3;
+RespawnDelay = 4;
+#include "=BTC=_revive\=BTC=_respawn.h"
+#include "sub_radio\sub_radio_UI.hpp"
 class Header
 {
   gameType = COOP;
@@ -126,7 +129,3 @@ onLoadName = "Screavics Custom Co-op based on AW/IA Mission";
 /*loadScreen = "awMissionLogo.jpg";*/
 OnLoadMission = "A custom-made domination-esque mission for ArmA 3, Ahoy World Invade &amp; Annex is lovingly crafted by Rarek and modded for custom play by Screavics";
 
-Respawn = 3;
-RespawnDelay = 4;
-#include "=BTC=_revive\=BTC=_respawn.h"
-#include "sub_radio\sub_radio_UI.hpp"

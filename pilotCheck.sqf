@@ -18,7 +18,7 @@ This version of Domination was lovingly crafted by
 Jack Williams (Rarek) for Ahoy World!
 */
 
-if (typeof player != "B_Helipilot_F") then {
+if ((typeof player != "B_Helipilot_F"))   then {
   private "_v";
   while {alive player} do {
     waituntil {vehicle player != player};
@@ -31,4 +31,4 @@ if (typeof player != "B_Helipilot_F") then {
       };
     };
   };
-};
+}

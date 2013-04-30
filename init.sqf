@@ -42,6 +42,7 @@ Jack Williams (Rarek) for Ahoy World!
 	
 	You can NOT have an AO called "Nothing".
 */
+call compile preprocessFile "=BTC=_revive\=BTC=_revive_init.sqf";
 call compile preprocessFile "=BTC=_TK_punishment\=BTC=_tk_init.sqf";
 call compile preprocessFile "players.sqf";
 _targets = [
@@ -299,7 +300,6 @@ PARAMS_SquadsPatrol = 3;
 PARAMS_SquadsDefend = 1;
 PARAMS_TeamsPatrol = 3;
 PARAMS_CarsPatrol = 1;
-call compile preprocessFile "=BTC=_revive\=BTC=_revive_init.sqf";
 _null = [] execvm "sub_radio\sub_radio_init2.sqf";
 call compile preprocessFile "=BTC=_TK_punishment\=BTC=_tk_init.sqf";
 for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do

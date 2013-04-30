@@ -15,9 +15,9 @@ BTC_disable_respawn = 0;
 BTC_respawn_gear    = 1;
 BTC_active_lifes    = 1;
 BTC_lifes           = 10;
-BTC_black_screen    = 0;//Black screen + button while unconscious or action wheel and clear view
-BTC_action_respawn  = 0;//if black screen is set to 0 you can choose if you want to use the action wheel or the button. Keep in mind that if you don't use the button, the injured player can use all the action, frag too....
-BTC_respawn_time    = 0;
+BTC_black_screen    = 1;//Black screen + button while unconscious or action wheel and clear view
+BTC_action_respawn  = 1;//if black screen is set to 0 you can choose if you want to use the action wheel or the button. Keep in mind that if you don't use the button, the injured player can use all the action, frag too....
+BTC_respawn_time    = 300;
 BTC_active_mobile   = 1;//Active mobile respawn (You have to put in map the vehicle and give it a name. Then you have to add one object per side to move to the mobile (BTC_base_flag_west,BTC_base_flag_east) - (1 = yes, 0 = no))
 BTC_mobile_respawn  = 1;//Active the mobile respawn fnc (1 = yes, 0 = no)
 BTC_mobile_respawn_time = 30;//Secs delay for mobile vehicle to respawn
@@ -31,7 +31,8 @@ BTC_objects_actions_civ  = [];
 if (isServer) then
 {
 	BTC_vehs_mobile_west = [mobile_west_0];//Editable - define mobile west
-	BTC_vehs_mobile_west2 = [mobile_west_1];//Editable - define mobile west 2
+	BTC_vehs_mobile_west1 = [mobile_west_1];//Editable - define mobile west 2
+	BTC_vehs_mobile_west2 = [mobile_west_2];//Editable - define mobile west 2
 	BTC_vehs_mobile_east = [mobile_east_0];//Editable - define mobile east
 	BTC_vehs_mobile_guer = [];//Editable - define mobile independent
 	BTC_vehs_mobile_civ  = [];//Editable - define mobile civilian
@@ -46,6 +47,7 @@ if (isServer) then
 	//Mobile
 	BTC_vehs_mobile_west_str = [];BTC_vehs_mobile_east_str = [];BTC_vehs_mobile_guer_str = [];
 	if (BTC_active_mobile == 1 && count BTC_vehs_mobile_west != 0) then {for "_i" from 0 to ((count BTC_vehs_mobile_west) - 1) do {_veh = (BTC_vehs_mobile_west select _i);_var = str (_veh);BTC_vehs_mobile_west_str = BTC_vehs_mobile_west_str + [_var];_veh setVariable ["BTC_mobile_west",_var,true];if (BTC_mobile_respawn == 1) then {_resp = [_veh,_var,"BTC_mobile_west"] spawn BTC_vehicle_mobile_respawn;};};} else {{deleteVehicle _x} foreach BTC_vehs_mobile_west;};
+	if (BTC_active_mobile == 1 && count BTC_vehs_mobile_west1 != 0) then {for "_i" from 0 to ((count BTC_vehs_mobile_west1) - 1) do {_veh = (BTC_vehs_mobile_west1 select _i);_var = str (_veh);BTC_vehs_mobile_west_str = BTC_vehs_mobile_west_str + [_var];_veh setVariable ["BTC_mobile_west",_var,true];if (BTC_mobile_respawn == 1) then {_resp = [_veh,_var,"BTC_mobile_west"] spawn BTC_vehicle_mobile_respawn;};};} else {{deleteVehicle _x} foreach BTC_vehs_mobile_west1;};
 	if (BTC_active_mobile == 1 && count BTC_vehs_mobile_west2 != 0) then {for "_i" from 0 to ((count BTC_vehs_mobile_west2) - 1) do {_veh = (BTC_vehs_mobile_west2 select _i);_var = str (_veh);BTC_vehs_mobile_west_str = BTC_vehs_mobile_west_str + [_var];_veh setVariable ["BTC_mobile_west",_var,true];if (BTC_mobile_respawn == 1) then {_resp = [_veh,_var,"BTC_mobile_west"] spawn BTC_vehicle_mobile_respawn;};};} else {{deleteVehicle _x} foreach BTC_vehs_mobile_west2;};
 	if (BTC_active_mobile == 1 && count BTC_vehs_mobile_east != 0) then {for "_i" from 0 to ((count BTC_vehs_mobile_east) - 1) do {_veh = (BTC_vehs_mobile_east select _i);_var = str (_veh);BTC_vehs_mobile_east_str = BTC_vehs_mobile_east_str + [_var];_veh setVariable ["BTC_mobile_east",_var,true];if (BTC_mobile_respawn == 1) then {_resp = [_veh,_var,"BTC_mobile_east"] spawn BTC_vehicle_mobile_respawn;};};} else {{deleteVehicle _x} foreach BTC_vehs_mobile_east;};
 	if (BTC_active_mobile == 1 && count BTC_vehs_mobile_guer != 0) then {for "_i" from 0 to ((count BTC_vehs_mobile_guer) - 1) do {_veh = (BTC_vehs_mobile_guer select _i);_var = str (_veh);BTC_vehs_mobile_guer_str = BTC_vehs_mobile_guer_str + [_var];_veh setVariable ["BTC_mobile_guer",_var,true];if (BTC_mobile_respawn == 1) then {_resp = [_veh,_var,"BTC_mobile_guer"] spawn BTC_vehicle_mobile_respawn;};};} else {{deleteVehicle _x} foreach BTC_vehs_mobile_guer;};
